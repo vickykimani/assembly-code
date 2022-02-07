@@ -1,0 +1,29 @@
+;program to add two 16-bit data (method-1)
+
+
+org 1104H 
+SUM DW 0
+CARRY DB 0
+END
+
+ASSUME CS:CODE
+ASSUME DS:DATA
+ORG 1000H
+
+MOV AX,205AH
+MOV BX,40EDH
+MOV CL,00H
+ADD AX,BX
+MOV SUM,AX
+JNC AHEAD
+INC CL 
+AHEAD: MOV CARRY,CL
+HLT
+
+END
+
+
+
+
+
+

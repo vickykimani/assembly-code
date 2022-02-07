@@ -1,0 +1,16 @@
+
+org 100h
+
+MOV [2002H], 88H
+MOV [2004H], 55H
+MOV AL,[2002H]
+MOV BL,[2004H]
+ADD AL,BL
+MOV [2006H],AL
+MOV CX, [2006H]
+
+ret
+
+
+
+

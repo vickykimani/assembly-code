@@ -1,0 +1,20 @@
+
+org 100h
+
+MOV AX,4
+MOV BX,6
+CMP AX,BX
+JA X1  
+SUB AX,1
+OUT 199,AX
+JMP EXIT
+X1:
+POP AX
+OUT 199,AX
+EXIT:
+
+ret
+
+
+
+

@@ -1,0 +1,15 @@
+
+org 100h
+
+STC
+MOV [03H],5
+MOV BX,15
+SBB [03H],BX
+XCHG AX,[03H]
+OUT 199,AX
+
+ret
+
+
+
+
